@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --button: #b87878;
+  --text: #fff;
 }
 
 @theme inline {
@@ -13,15 +14,53 @@
   --font-display: var(--font-bricolage);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@media (min-width: 640px) {
+  .main {padding: 4rem;}
+  .main-title {font-size: 4.6rem;}
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.main
+{
+  min-height: 100vh;;
+  background-color: var(--background);
+  padding: 4rem 2rem;
+  color: var(--text);
+}
+
+.main-title
+{
+  font-family: var(--display), sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.main-subtitle
+{
+  margin-top: 1rem;
+  max-width: 28rem;
+  font-size: 1.111111rem;
+  opacity: 0.8;
+}
+
+.auth-button
+{
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--button);
+  color: black;
+  text-decoration: none;
 }
